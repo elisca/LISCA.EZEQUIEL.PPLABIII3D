@@ -52,6 +52,7 @@ btnGuardar.addEventListener('click', (e)=>{
 });
 
 btnModificar.addEventListener('click', (e)=>{
+    e.preventDefault();
     let IdSel = obtenerIdSeleccionado();
 
     let auxAnuncioAuto=new Anuncio_Auto(

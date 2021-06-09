@@ -64,6 +64,15 @@ export function crearTabla(lista){
 function agregarManejadorTr(tr){
     if(tr){
         tr.addEventListener('click', function(e){
+            listaAnuncios[indice].removeAttribute("data-id");
+            listaAnuncios[indice].removeAttribute("data-titulo");
+            listaAnuncios[indice].removeAttribute("data-transaccion");
+            listaAnuncios[indice].removeAttribute("data-descripcion");
+            listaAnuncios[indice].removeAttribute("data-precio");
+            listaAnuncios[indice].removeAttribute("data-puertas");
+            listaAnuncios[indice].removeAttribute("data-kilometraje");
+            listaAnuncios[indice].removeAttribute("data-potencia");
+            
             IdSeleccionado = tr.dataset.id; //Muestra id de ese tr
             txtTitulo.value=tr.dataset.titulo;
             lstTransaccion.value = tr.dataset.transaccion;
@@ -71,7 +80,7 @@ function agregarManejadorTr(tr){
             numPrecio.value = tr.dataset.precio;
             numPuertas.value = tr.dataset.puertas;
             numKMs.value = tr.dataset.kilometraje;
-            numPotencia.value = tr.dataset.potencia;
+            numPotencia.value = tr.dataset.potencia;            
         });
     }
 }
