@@ -24,6 +24,7 @@ const LAPSO_ESPERA=3000;
 window.addEventListener('load', inicializarManejadores());
 
 function inicializarManejadores(){
+    alert("Boton \"Modificar\" con función a corregir.");
     Id = cargarId();
     listaAnuncios = cargarDatos();
     if(listaAnuncios.length>0){
